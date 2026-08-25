@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/* Font Declarations for São Torpes Free Display Font */
+@font-face {
+  font-family: 'São Torpes';
+  src: local('São Torpes'), local('Sao Torpes'), local('SaoTorpes'), local('Sao-Torpes'), local('São Torpes Display'), local('Sao Torpes Free Display Font');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sao Torpes';
+  src: local('Sao Torpes'), local('São Torpes'), local('SaoTorpes'), local('Sao-Torpes'), local('Sao Torpes Display'), local('Sao Torpes Free Display Font');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'São Torpes Free Display Font';
+  src: local('São Torpes Free Display Font'), local('Sao Torpes Free Display Font'), local('São Torpes'), local('Sao Torpes'), local('SaoTorpes');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sao Torpes Free Display Font';
+  src: local('Sao Torpes Free Display Font'), local('São Torpes Free Display Font'), local('Sao Torpes'), local('São Torpes'), local('SaoTorpes');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sao-torpes: "São Torpes", "Sao Torpes", "São Torpes Free Display Font", "Sao Torpes Free Display Font", "Syne", "Playfair Display", sans-serif;
+  --font-display: "São Torpes", "Sao Torpes", "São Torpes Free Display Font", "Sao Torpes Free Display Font", "Cinzel", "Syne", sans-serif;
+  --font-serif: "São Torpes", "Sao Torpes", "São Torpes Free Display Font", "Sao Torpes Free Display Font", "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-sao-torpes: 'São Torpes', 'Sao Torpes', 'São Torpes Free Display Font', 'Sao Torpes Free Display Font', 'Syne', 'Playfair Display', sans-serif;
+    --font-display: 'São Torpes', 'Sao Torpes', 'São Torpes Free Display Font', 'Sao Torpes Free Display Font', 'Cinzel', 'Syne', sans-serif;
+    --font-serif: 'São Torpes', 'Sao Torpes', 'São Torpes Free Display Font', 'Sao Torpes Free Display Font', 'Playfair Display', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    --color-brand-primary: #B76E79;
+    --color-brand-bg: #FAF5EE;
+    --color-brand-dark: #A31621;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-dark);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif, .font-serif-heading, .font-display, .font-sao-torpes, .font-metana {
+    font-family: var(--font-sao-torpes);
+    letter-spacing: -0.01em;
+    font-feature-settings: "liga" 1, "kern" 1;
+  }
+
+  .font-display, .font-cinzel {
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+}
+
+/* Bold Typography Theme Utilities */
+.tracking-widest-plus {
+  letter-spacing: 0.3em;
+}
+
+.tracking-editorial {
+  letter-spacing: 0.2em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF5EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8D8CD;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B76E79;
+}
+
+/* Subtle luxury animations & helpers */
+.editorial-shadow {
+  box-shadow: 0 10px 30px -10px rgba(163, 22, 33, 0.08), 0 4px 12px -2px rgba(163, 22, 33, 0.04);
+}
+
+.editorial-shadow-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.editorial-shadow-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -15px rgba(163, 22, 33, 0.12), 0 8px 20px -4px rgba(163, 22, 33, 0.06);
+}
+
+.gold-accent-line {
+  background: linear-gradient(90deg, transparent, #B76E79, transparent);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+

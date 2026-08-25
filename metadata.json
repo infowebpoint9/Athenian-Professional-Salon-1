@@ -1,0 +1,6 @@
+{
+  "name": "Athenian Salon Mumbai",
+  "description": "Official website for Athenian Salon Mumbai (Athenian Professional) in Ghatkopar East, offering luxury hair, skin, bridal, nail, and beauty care services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
